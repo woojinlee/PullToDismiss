@@ -20,7 +20,7 @@ class SampleWebViewController: UIViewController {
         view.addSubview(webView)
         
         webView.translatesAutoresizingMaskIntoConstraints = false
-        let attributes: [NSLayoutAttribute] = [.top, .left, .right, .bottom]
+        let attributes: [NSLayoutConstraint.Attribute] = [.top, .left, .right, .bottom]
         let constraints: [NSLayoutConstraint] = attributes.map { attribute in
             NSLayoutConstraint(item: webView, attribute: attribute, relatedBy: .equal, toItem: view, attribute: attribute, multiplier: 1.0, constant: 0.0)
         }
