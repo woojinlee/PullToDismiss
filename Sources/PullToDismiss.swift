@@ -61,23 +61,24 @@ open class PullToDismiss: NSObject {
         self.init(scrollView: scrollView, viewController: viewController)
     }
     
-    public init(scrollView: UIScrollView, viewController: UIViewController, navigationBar: UIView? = nil) {
+    public init(scrollView: UIScrollView, viewController: UIViewController, navigationView: UIView? = nil) {
         super.init()
         self.proxy = ScrollViewDelegateProxy(delegates: [self])
         self.__scrollView = scrollView
         self.__scrollView?.delegate = self.proxy
         self.viewController = viewController
         
-        if let navigationBar = navigationBar ?? viewController.navigationController?.navigationBar {
+        if let navigationBar = navigationView ?? viewController.navigationController?.navigationBar {
             let gesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
             navigationBar.addGestureRecognizer(gesture)
-            navigationBar.addSubview(topSafeAreaBackgroundView)
-            navigationBar.clipsToBounds = false
-            
-            let statusBarHeight = UIApplication.shared.statusBarFrame.height
-            let statusBarBackgroundColor = (navigationBar as? UINavigationBar)?.barTintColor ?? navigationBar.backgroundColor
-            topSafeAreaBackgroundView.backgroundColor = statusBarBackgroundColor
-            topSafeAreaBackgroundView.frame = CGRect(x: 0, y: -statusBarHeight, width: navigationBar.frame.width, height: statusBarHeight)
+            if navigationView == nil {
+                navigationBar.clipsToBounds = false
+                let statusBarHeight = UIApplication.shared.statusBarFrame.height
+                let statusBarBackgroundColor = (navigationBar as? UINavigationBar)?.barTintColor ?? navigationBar.backgroundColor
+                navigationBar.addSubview(topSafeAreaBackgroundView)
+                topSafeAreaBackgroundView.backgroundColor = statusBarBackgroundColor
+                topSafeAreaBackgroundView.frame = CGRect(x: 0, y: -statusBarHeight, width: navigationBar.frame.width, height: statusBarHeight)
+            }
             self.panGesture = gesture
         }
     }
