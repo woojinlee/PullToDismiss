@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FC93B2322E84B1F00108233 /* PullToDismissScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC93B2222E84B1F00108233 /* PullToDismissScrollDelegate.swift */; };
 		4D22AC5C1E6E36B20006EDA0 /* DelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D22AC5A1E6E36B20006EDA0 /* DelegateProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D22AC5D1E6E36B20006EDA0 /* DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22AC5B1E6E36B20006EDA0 /* DelegateProxy.m */; };
 		4D2B82BA1E73E835008DD411 /* Unavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B82B91E73E835008DD411 /* Unavailable.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FC93B2222E84B1F00108233 /* PullToDismissScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToDismissScrollDelegate.swift; sourceTree = "<group>"; };
 		4D22AC5A1E6E36B20006EDA0 /* DelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateProxy.h; sourceTree = "<group>"; };
 		4D22AC5B1E6E36B20006EDA0 /* DelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateProxy.m; sourceTree = "<group>"; };
 		4D2B82B91E73E835008DD411 /* Unavailable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unavailable.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				4D22AC5B1E6E36B20006EDA0 /* DelegateProxy.m */,
 				4D63E69F1E6E38F100FEA3D0 /* ScrollViewDelegateProxy.swift */,
 				4D2B82B91E73E835008DD411 /* Unavailable.swift */,
+				3FC93B2222E84B1F00108233 /* PullToDismissScrollDelegate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				4DBDB74F1E1F69770068AA1F /* EdgeShadow.swift in Sources */,
 				4D5A35191DDB21DB00ED9D54 /* PullToDismiss.swift in Sources */,
 				4DBDB7511E1F6FFA0068AA1F /* UIView+EdgeShadow.swift in Sources */,
+				3FC93B2322E84B1F00108233 /* PullToDismissScrollDelegate.swift in Sources */,
 				4D2F15C31DF2D570000A5172 /* BackgroundEffect.swift in Sources */,
 				4D22AC5D1E6E36B20006EDA0 /* DelegateProxy.m in Sources */,
 				4D9D97C51DF058C700C10C87 /* CustomBlurView.swift in Sources */,

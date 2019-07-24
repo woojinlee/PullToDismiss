@@ -18,6 +18,7 @@ open class PullToDismiss: NSObject {
     
     open var backgroundEffect: BackgroundEffect? = ShadowEffect.default
     open var edgeShadow: EdgeShadow? = EdgeShadow.default
+    open var scrollDelegate: PullToDismissScrollDelegate?
     
     public var dismissAction: (() -> Void)?
     public weak var delegate: UIScrollViewDelegate? {
@@ -176,6 +177,7 @@ open class PullToDismiss: NSObject {
         if haveShadowEffect {
             targetViewController?.view.clipsToBounds = false
         }
+        scrollDelegate?.willBeginDragging()
     }
     
     fileprivate func updateViewPosition(offset: CGFloat) {
