@@ -268,7 +268,7 @@ extension PullToDismiss: UIScrollViewDelegate {
     }
     
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        finishDragging(withVelocity: velocity)
+        finishDragging(withVelocity: .zero)
         dragging = false
         previousContentOffsetY = 0.0
     }
