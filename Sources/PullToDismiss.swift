@@ -17,8 +17,8 @@ open class PullToDismiss: NSObject {
     }
     
     open var backgroundEffect: BackgroundEffect? = ShadowEffect.default
-    open var edgeShadow: EdgeShadow? = EdgeShadow.default
-    open var scrollDelegate: PullToDismissScrollDelegate?
+    open var edgeShadow: EdgeShadow?
+    open weak var scrollDelegate: PullToDismissScrollDelegate?
     
     public var dismissAction: (() -> Void)?
     public weak var delegate: UIScrollViewDelegate? {
