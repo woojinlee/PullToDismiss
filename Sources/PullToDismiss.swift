@@ -71,7 +71,6 @@ open class PullToDismiss: NSObject {
         
         if let navigationBar = navigationView ?? viewController.navigationController?.navigationBar {
             let gesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
-            navigationBar.addGestureRecognizer(gesture)
             if navigationView == nil {
                 navigationBar.clipsToBounds = false
                 let statusBarHeight = UIApplication.shared.statusBarFrame.height
